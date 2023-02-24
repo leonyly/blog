@@ -1,0 +1,83 @@
+@import 'common.scss';
+
+.detail {
+  padding: 80px 0 50px;
+  background-color: $color-bg;
+	font-size: 16px;
+  :global {
+    .content {
+      .article {
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+
+        .wapper {
+          float: left;
+          margin-right: 20px;
+          margin-bottom: 20px;
+          width: 940px;
+					background-color: rgb(251, 251, 251);
+					padding: 8px 25px 15px 25px;
+        }
+
+        .tree {
+          float: left;
+
+          .nav {
+            position: fixed;
+            padding: 20px;
+            width: 240px;
+            background: #fff;
+            box-shadow: 0 0px 3px rgba(0, 0, 0, 0.14), 0 0px 3px rgba(0, 0, 0, 0.15);
+            text-align: center;
+          }
+
+          .list {
+            text-align: justify;
+            font-size: 14px;
+            line-height: 1.6;
+
+            .code-li {
+              padding-left: 15px;
+            }
+
+            .li-a,
+            .code-li {
+              &:hover {
+                color: $color-text;
+              }
+
+              a:target {
+                position: relative;
+                top: -100px;
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .v-show-content h2>a {
+      position: relative;
+      top: 44px; // 偏移值
+      display: block;
+    }
+
+    .comment {
+      padding-top: 30px;
+      clear: both;
+      padding-bottom: 40px;
+      width: 940px;
+      border-radius: 3px;
+      background: #fff;
+    }
+
+    .line {
+      margin: 30px 0;
+      width: 100%;
+      height: 1px;
+      background: #dfdfdf;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.mapper.GuestbookDAO"> 
+    <select id="getGuestbookById"  resultType="Guestbook">
+        select
+        * from Guestbook where `id`=#{id}
+    </select>
+    <delete id="delete">
+		delete from Guestbook where id=#{id}
+	</delete>
+    <select id="getGuestbookCount" resultType="int">
+        select count(id) from Guestbook
+    </select>
+    <select id="getAllGuestbook" resultType="Guestbook">
+        select * from Guestbook
+    </select>
+    <insert id="insert" parameterType="Guestbook">
+        insert into
+        Guestbook(userid,visitid,bodytext,created,) 
+        values(#{userid},#{visitid},#{bodytext},#{created},);
+    </insert>
+        
+    <update id="update" parameterType="Guestbook">
+		update Guestbook set userid=#{userid},visitid=#{visitid},bodytext=#{bodytext},created=#{created}, where id=#{id}
+	</update>
+        </mapper>

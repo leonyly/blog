@@ -1,0 +1,96 @@
+@import "/styles/common.scss";
+
+.msg {
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 120px;
+  width: 100%;
+  background-color: #fff;
+
+  :global {
+    .msg_head {
+      text-align: center;
+
+      .h3mes {
+        color: rgb(81, 82, 80);
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+    }
+
+    .form-content {
+      display: flex;
+
+      .avatar-info {
+        margin-right: 20px;
+        padding-top: 10px;
+        width: 80px;
+
+        .avatar {
+          margin: 0 auto;
+          width: 60px;
+          height: 60px;
+        }
+
+        .nickname {
+          color: #4ebbaa;
+          text-align: center;
+          font-size: 12px;
+          margin-top: 10px;
+        }
+
+        .tips {
+          color: #999;
+          font-size: 11px;
+        }
+      }
+
+      .form {
+        flex: 1;
+        margin-top: 8px;
+      }
+
+      .text {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .textarea {
+        padding: 10px;
+        min-height: 140px;
+        max-height: 200px;
+        max-width: 1000px;
+        min-width: 1000px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+
+        &:focus {
+          outline: none;
+          border: 1px solid #6bc30d;
+        }
+      }
+
+      .emoji-btn {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-right: 90px;
+
+        .submit {
+          width: 120px;
+          height: 40px;
+          border-radius: 4px;
+          background-image: $bg;
+          color: #fff;
+          font-size: 14px;
+
+          &.disabled {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

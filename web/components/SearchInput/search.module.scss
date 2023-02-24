@@ -1,0 +1,63 @@
+.search {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: center;
+  background-color: #6fa3ef;
+
+  :global {
+    .input__wrap {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      font-size: 14px;
+      border-radius: 50px;
+      overflow: hidden;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+    }
+
+    .inline-input {
+      padding-right: 30px;
+      -webkit-appearance: none;
+      background-color: #FFF;
+      background-image: none;
+      border-radius: 4px;
+      border: 1px solid #DCDFE6;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      color: #606266;
+      display: inline-block;
+      font-size: inherit;
+      height: 40px;
+      line-height: 40px;
+      outline: 0;
+      padding: 0 15px;
+      -webkit-transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+      transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+      width: 100%;
+    }
+
+    .input__suffix {
+      right: 5px;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      // pointer-events: none;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      color: #C0C4CC;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+    }
+
+    .icon-find {
+      font-size: 22px;
+      font-weight: bold;
+      display: block;
+      margin-right: 4px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.mapper.ClassDAO"> 
+    <select id="getClassById"  resultType="Class">
+        select
+        * from Class where `id`=#{id}
+    </select>
+    <delete id="delete">
+		delete from Class where id=#{id}
+	</delete>
+    <select id="getClassCount" resultType="int">
+        select count(id) from Class
+    </select>
+    <select id="getAllClass" resultType="Class">
+        select * from Class
+    </select>
+    <insert id="insert" parameterType="Class">
+        insert into
+        Class(classname,collegeid,majorid,created,master,leader,status) 
+        values(#{classname},#{collegeid},#{majorid},#{created},#{master},#{leader},#{status});
+    </insert>
+        
+    <update id="update" parameterType="Class">
+		update Class set classname=#{classname},collegeid=#{collegeid},majorid=#{majorid},created=#{created},master=#{master},leader=#{leader},status=#{status} where id=#{id}
+	</update>
+        </mapper>

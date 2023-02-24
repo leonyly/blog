@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.mapper.ZanDAO"> 
+    <select id="getZanById"  resultType="Zan">
+        select
+        * from Zan where `id`=#{id}
+    </select>
+    <delete id="delete">
+		delete from Zan where id=#{id}
+	</delete>
+    <select id="getZanCount" resultType="int">
+        select count(id) from Zan
+    </select>
+    <select id="getAllZan" resultType="Zan">
+        select * from Zan
+    </select>
+    <insert id="insert" parameterType="Zan">
+        insert into
+        Zan(aid,uid,) 
+        values(#{aid},#{uid},);
+    </insert>
+        
+    <update id="update" parameterType="Zan">
+		update Zan set aid=#{aid},uid=#{uid}, where id=#{id}
+	</update>
+        </mapper>

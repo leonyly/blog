@@ -1,0 +1,137 @@
+@import 'common.scss';
+
+.articles {
+  display: flex;
+  padding-top: 60px;
+
+  :global {
+    .blog {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    .loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .paginate {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .category {
+      margin-top: 20px;
+      width: 300px;
+      height: 200px;
+    }
+
+    h3.aside-title {
+      padding: 0 15px;
+      height: 38px;
+      border-bottom: 1px solid $color-bg;
+      background: #fff;
+      color: #3d3d3d;
+      font-size: 16px;
+      line-height: 38px;
+    }
+
+    .aside-content {
+      padding: 15px 15px 20px 15px;
+      background: #fff;
+    }
+
+    .tag-box {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background: #fff;
+      padding: 10px 30px;
+    }
+
+    .tag-item {
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-block;
+      margin: 6px 15px 8px 0;
+      padding: 5px 15px;
+      color: #fff;
+      border-radius: 15px;
+
+      &:nth-child(1n) {
+        border: 1px solid #6fa3ef;
+        background: #6fa3ef;
+      }
+
+      &:nth-child(2n) {
+        border: 1px solid #ff9800;
+        background: #ff9800;
+      }
+
+      &:nth-child(3n) {
+        border: 1px solid #46c47c;
+        background: #46c47c;
+      }
+
+      &:nth-child(4n) {
+        border: 1px solid #f9bb3c;
+        background: #f9bb3c;
+      }
+
+      &:nth-child(5n) {
+        border: 1px solid #bc99c4;
+        background: #bc99c4;
+      }
+
+      &:nth-child(6n) {
+        border: 1px solid #e8583d;
+        background: #e8583d;
+      }
+    }
+
+    .aside-box {
+      margin-bottom: 20px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .aside-item {
+      display: flex;
+      padding: 7px 0;
+      color: #333;
+      font-size: 14px;
+
+      &:hover {
+        color: #6bc30d;
+      }
+
+      .aside-name {
+        flex: 1;
+      }
+    }
+
+    .aside-item-article {
+      padding: 7px 0;
+      color: #333;
+      font-size: 14px;
+
+      &:hover {
+        color: #6bc30d;
+      }
+
+      .aside-name {
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .aside-count {
+        margin-top: 4px;
+        color: $color-hint;
+        font-size: 12px;
+      }
+    }
+  }
+}

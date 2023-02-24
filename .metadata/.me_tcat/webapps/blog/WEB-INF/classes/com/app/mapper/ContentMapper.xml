@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.mapper.ContentDAO"> 
+    <select id="getContentById"  resultType="Content">
+        select
+        * from Content where `id`=#{id}
+    </select>
+    <delete id="delete">
+		delete from Content where id=#{id}
+	</delete>
+    <select id="getContentCount" resultType="int">
+        select count(id) from Content
+    </select>
+     <select id="search" resultType="Content">
+        select * from Content where title LIKE #{title}
+    </select>
+    <select id="getContentByTag" resultType="Content">
+        select * from Content where tags=#{tags}
+    </select>
+    <select id="getAllContent" resultType="Content">
+        select * from Content
+    </select>
+    <insert id="insert" parameterType="Content">
+        insert into
+        Content(uid,title,thumb,description,bodytext,created,click,support,tags) 
+        values(#{uid},#{title},#{thumb},#{description},#{bodytext},#{created},#{click},#{support},#{tags});
+    </insert>
+        
+    <update id="update" parameterType="Content">
+		update Content set uid=#{uid},title=#{title},thumb=#{thumb},description=#{description},bodytext=#{bodytext},created=#{created},click=#{click},support=#{support},tags=#{tags} where id=#{id}
+	</update>
+        </mapper>
